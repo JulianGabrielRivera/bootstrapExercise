@@ -1,8 +1,12 @@
 import React from "react";
 import costarica from "../costarica.png";
-
+import { useEffect } from "react";
+import { GoogleMaps } from "./GoogleMaps";
 export const PlaceDetails = () => {
   // overall, cost,internet, fun,safety
+
+  useEffect(() => {}, []);
+
   return (
     <>
       <div className="container mt-4">
@@ -21,9 +25,9 @@ export const PlaceDetails = () => {
         </p>
       </div>
       <div className="container mt-4">
-        <div className="row align-items-center">
-          <div className="col-2">Overall</div>
-          <div class="progress col-10 p-0">
+        <div className="row align-items-center justify-content-around">
+          <div className="col-2 p-0">Overall</div>
+          <div class="progress col-9 p-0">
             <div
               class="progress-bar bg-success"
               role="progressbar"
@@ -38,9 +42,9 @@ export const PlaceDetails = () => {
           <div className="col">Fun</div>
           <div className="col">Safety</div> */}
         </div>
-        <div className="row align-items-center">
-          <div className="col-2">Cost</div>
-          <div class="progress col-10 p-0">
+        <div className="row align-items-center justify-content-around">
+          <div className="col-2 p-0">Cost</div>
+          <div class="progress col-9 p-0">
             <div
               class="progress-bar"
               role="progressbar"
@@ -51,9 +55,9 @@ export const PlaceDetails = () => {
             ></div>
           </div>
         </div>
-        <div className="row align-items-center">
-          <div className="col-2">Internet</div>
-          <div class="progress col-10 p-0">
+        <div className="row align-items-center justify-content-around">
+          <div className="col-2 p-0">Internet</div>
+          <div class="progress col-9 p-0">
             <div
               class="progress-bar"
               role="progressbar"
@@ -64,11 +68,11 @@ export const PlaceDetails = () => {
             ></div>
           </div>
         </div>
-        <div className="row align-items-center">
-          <div className="col-2">Fun</div>
-          <div class="progress col-10 p-0">
+        <div className="row align-items-center justify-content-around">
+          <div className="col-2 p-0">Fun</div>
+          <div class="progress col-9 p-0">
             <div
-              class="progress-bar"
+              class="progress-bar "
               role="progressbar"
               aria-valuenow="0"
               aria-valuemin="0"
@@ -77,9 +81,9 @@ export const PlaceDetails = () => {
             ></div>
           </div>
         </div>
-        <div className="row align-items-center">
-          <div className="col-2">Safety</div>
-          <div class="progress col-10 p-0">
+        <div className="row align-items-center justify-content-around">
+          <div className="col-2 p-0">Safety</div>
+          <div class="progress col-9 p-0">
             <div
               class="progress-bar bg-danger"
               role="progressbar"
@@ -91,6 +95,7 @@ export const PlaceDetails = () => {
           </div>
         </div>
       </div>
+      <GoogleMaps />
     </>
   );
 };
