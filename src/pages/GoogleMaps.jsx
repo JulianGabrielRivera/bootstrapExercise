@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   GoogleMap,
   useJsApiLoader,
@@ -24,7 +25,7 @@ export const GoogleMaps = () => {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyB2yFeDmk1oV5PxGvJ5ud8ofX5JfeNMpI8",
+    googleMapsApiKey: `${import.meta.env.VITE_APP_Google_key}`,
     libraries: ["places"],
   });
 
